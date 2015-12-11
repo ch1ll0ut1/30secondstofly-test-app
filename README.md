@@ -33,6 +33,10 @@ Run
 	#with nodemon
 	nodemon
 
+Run Rest API
+
+	node rest-server.js
+
 Testing
 
 	npm test

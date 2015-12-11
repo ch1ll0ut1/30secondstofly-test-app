@@ -172,7 +172,7 @@ function readCacheFile(filename)
 function writeCacheFile(filename, data)
 {
 	jsonfile.writeFile(filename, data, {spaces: 4}, function(err) {
-	  	console.error(err)
+	  	if(err) console.error(err)
 	});
 }
 
