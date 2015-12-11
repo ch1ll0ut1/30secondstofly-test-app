@@ -3,7 +3,6 @@
 /**
  * Request utility helper
  *
- * todo: add gzip support
  * todo: handle connection timeout
  *
  * Note: this file is meant to be specific for current needs and will mutate and grow with adding cases of need, 
@@ -11,7 +10,7 @@
  */
 
 var https = require("https");
-// var zlib = require('zlib');
+var zlib = require('zlib');
 
 /**
  * @param  {Object} data to be sent as json through a https post method
@@ -31,43 +30,47 @@ exports.postJson = function postJson(data, hostname, path, callback)
 	    headers: {
 	        "Content-Type": "application/json",
 	        "Content-Length": data.length,
-	        // "accept-encoding": "gzip"
+	        "accept-encoding": "gzip,deflate"
 	    }
 	};
 
 	//create post request
 	var request = https.request(request_options, function(response){
 
-	    // console.log('response to: ' + request_options.hostname + request_options.path);
-	    // console.log('response status: ' + response.statusCode);
-	    console.log('response headers: ' + JSON.stringify(response.headers));
+	    var stream = response;
+
+	    switch(response.headers["content-encoding"])
+	    {
+	    	case 'gzip':
+	    	case 'deflate':
+		    	stream = zlib.createUnzip();
+		    	response.pipe(stream);
+	    	break;
+	    }
 
 	    var data = "";
 
-	    response.setEncoding("utf8");
+	    stream.setEncoding("utf8");
 
-	    response.on("data", function(chunk) {
-	    	// console.log("response chunk", chunk)
+	    stream.on("data", function(chunk) {
 	        data += chunk;
 	    });
 
-		response.on("end", function() {
+		stream.on("end", function() {
 
 			if(!data)
 			{
 				return callback(null, {});
 			}
 
-			// var gzip = zlib.createGzip();
-
-			//parse response to json
+			//parse streamed data to json
 			try
 			{
 				data = JSON.parse(data);	
 			}
 			catch(err)
 			{
-				return callback(new Error("Failed parsing response as json: "+err));
+				return callback(new Error("Failed parsing stream as json: "+err));
 			}
 
 			callback(null, data);
