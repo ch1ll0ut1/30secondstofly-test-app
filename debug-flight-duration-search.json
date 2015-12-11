@@ -1,0 +1,41 @@
+{
+    "trips": {
+        "tripOption": [
+            {
+                "slice": [
+                    {
+                        "duration": 385
+                    }
+                ]
+            },
+            {
+                "slice": [
+                    {
+                        "duration": 390
+                    }
+                ]
+            },
+            {
+                "slice": [
+                    {
+                        "duration": 380
+                    }
+                ]
+            },
+            {
+                "slice": [
+                    {
+                        "duration": 376
+                    }
+                ]
+            },
+            {
+                "slice": [
+                    {
+                        "duration": 373
+                    }
+                ]
+            }
+        ]
+    }
+}

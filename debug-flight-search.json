@@ -1,0 +1,184 @@
+{
+    "kind": "qpxExpress#tripsSearch",
+    "trips": {
+        "kind": "qpxexpress#tripOptions",
+        "requestId": "D2P7V82YfKQVeNYSw0NOBt",
+        "data": {
+            "kind": "qpxexpress#data",
+            "airport": [
+                {
+                    "kind": "qpxexpress#airportData",
+                    "code": "JFK",
+                    "city": "NYC",
+                    "name": "New York John F Kennedy International"
+                },
+                {
+                    "kind": "qpxexpress#airportData",
+                    "code": "LAX",
+                    "city": "LAX",
+                    "name": "Los Angeles International"
+                }
+            ],
+            "city": [
+                {
+                    "kind": "qpxexpress#cityData",
+                    "code": "LAX",
+                    "name": "Los Angeles"
+                },
+                {
+                    "kind": "qpxexpress#cityData",
+                    "code": "NYC",
+                    "name": "New York"
+                }
+            ],
+            "aircraft": [
+                {
+                    "kind": "qpxexpress#aircraftData",
+                    "code": "320",
+                    "name": "Airbus A320"
+                }
+            ],
+            "tax": [
+                {
+                    "kind": "qpxexpress#taxData",
+                    "id": "ZP",
+                    "name": "US Flight Segment Tax"
+                },
+                {
+                    "kind": "qpxexpress#taxData",
+                    "id": "AY_001",
+                    "name": "US September 11th Security Fee"
+                },
+                {
+                    "kind": "qpxexpress#taxData",
+                    "id": "US_001",
+                    "name": "US Transportation Tax"
+                },
+                {
+                    "kind": "qpxexpress#taxData",
+                    "id": "XF",
+                    "name": "US Passenger Facility Charge"
+                }
+            ],
+            "carrier": [
+                {
+                    "kind": "qpxexpress#carrierData",
+                    "code": "VX",
+                    "name": "Virgin America Inc."
+                }
+            ]
+        },
+        "tripOption": [
+            {
+                "kind": "qpxexpress#tripOption",
+                "saleTotal": "USD478.10",
+                "id": "BwFZqFwbBjQPi3hu0KxzgG001",
+                "slice": [
+                    {
+                        "kind": "qpxexpress#sliceInfo",
+                        "duration": 380,
+                        "segment": [
+                            {
+                                "kind": "qpxexpress#segmentInfo",
+                                "duration": 380,
+                                "flight": {
+                                    "carrier": "VX",
+                                    "number": "411"
+                                },
+                                "id": "GqE0PolyBhDj32zd",
+                                "cabin": "COACH",
+                                "bookingCode": "E",
+                                "bookingCodeCount": 1,
+                                "marriedSegmentGroup": "0",
+                                "leg": [
+                                    {
+                                        "kind": "qpxexpress#legInfo",
+                                        "id": "Lt4R5nwZ-Yyj583n",
+                                        "aircraft": "320",
+                                        "arrivalTime": "2015-12-24T16:20-08:00",
+                                        "departureTime": "2015-12-24T13:00-05:00",
+                                        "origin": "JFK",
+                                        "destination": "LAX",
+                                        "originTerminal": "4",
+                                        "destinationTerminal": "3",
+                                        "duration": 380,
+                                        "onTimePerformance": 97,
+                                        "mileage": 2468,
+                                        "secure": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "pricing": [
+                    {
+                        "kind": "qpxexpress#pricingInfo",
+                        "fare": [
+                            {
+                                "kind": "qpxexpress#fareInfo",
+                                "id": "AGImniHW/zzivz/1j093bIm/J1KJeLt1AbLTvg1MgRMo",
+                                "carrier": "VX",
+                                "origin": "NYC",
+                                "destination": "LAX",
+                                "basisCode": "E3QNR"
+                            }
+                        ],
+                        "segmentPricing": [
+                            {
+                                "kind": "qpxexpress#segmentPricing",
+                                "fareId": "AGImniHW/zzivz/1j093bIm/J1KJeLt1AbLTvg1MgRMo",
+                                "segmentId": "GqE0PolyBhDj32zd"
+                            }
+                        ],
+                        "baseFareTotal": "USD431.63",
+                        "saleFareTotal": "USD431.63",
+                        "saleTaxTotal": "USD46.47",
+                        "saleTotal": "USD478.10",
+                        "passengers": {
+                            "kind": "qpxexpress#passengerCounts",
+                            "adultCount": 1
+                        },
+                        "tax": [
+                            {
+                                "kind": "qpxexpress#taxInfo",
+                                "id": "US_001",
+                                "chargeType": "GOVERNMENT",
+                                "code": "US",
+                                "country": "US",
+                                "salePrice": "USD32.37"
+                            },
+                            {
+                                "kind": "qpxexpress#taxInfo",
+                                "id": "AY_001",
+                                "chargeType": "GOVERNMENT",
+                                "code": "AY",
+                                "country": "US",
+                                "salePrice": "USD5.60"
+                            },
+                            {
+                                "kind": "qpxexpress#taxInfo",
+                                "id": "XF",
+                                "chargeType": "GOVERNMENT",
+                                "code": "XF",
+                                "country": "US",
+                                "salePrice": "USD4.50"
+                            },
+                            {
+                                "kind": "qpxexpress#taxInfo",
+                                "id": "ZP",
+                                "chargeType": "GOVERNMENT",
+                                "code": "ZP",
+                                "country": "US",
+                                "salePrice": "USD4.00"
+                            }
+                        ],
+                        "fareCalculation": "NYC VX LAX 431.63E3QNR USD 431.63 END ZP JFK XT 32.37US 4.00ZP 5.60AY 4.50XF JFK4.50",
+                        "latestTicketingTime": "2015-12-11T23:59-05:00",
+                        "ptc": "ADT"
+                    }
+                ]
+            }
+        ]
+    }
+}

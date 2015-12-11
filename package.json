@@ -1,0 +1,21 @@
+{
+  "name": "test-app",
+  "version": "1.0.0",
+  "description": "30secondstofly test app for native nodejs implementation of communication with the QPX google flights api",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "author": "Stefan Knoch",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "jsonfile": "^2.2.3",
+    "moment": "^2.10.6",
+    "moment-timezone": "^0.4.1",
+    "mysql": "^2.9.0"
+  }
+}
