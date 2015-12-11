@@ -14,6 +14,7 @@ Airports data downloaded from http://openflights.org/data.html
 csv2sql: http://www.convertcsv.com/csv-to-sql.htm
 
 Install
+
 	cd /test-app
 	npm install
 
@@ -25,6 +26,7 @@ Install
 	 	and enter your api and mysql database credentials in: /config.js
 
 Run
+
 	node index.js
 
 	#with nodemon
