@@ -63,15 +63,14 @@ exports.getAverageFlightDuration = function getAverageFlightDuration(options, ca
 	//read cache file
 	var cache = readCacheFile(cache_file);
 	
-	//check if cache exists, if not run request
+	//use cached version if exists
 	if(cache)
 	{
-		console.info("using cached version", cache_file)
 		callback(null, calculateAverageFlightDuration(cache));
 	}
+	//else send request
 	else
 	{
-		console.log("requesting", path);
 		request.postJson(data, host, path, function(err, data){
 
 			//handle errors returned by qpx api
@@ -116,7 +115,6 @@ exports.searchFlights = function searchFlights(options, callback)
 	//check if cache exists, if not run request
 	if(cache)
 	{
-		console.info("using cached version", cache_file)
 		callback(null, cache);
 	}
 	else

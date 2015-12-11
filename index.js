@@ -1,12 +1,8 @@
 "use strict";
 /**
 todo:
-- gzip
 - provide rest api
 - todo: implement prefered carrier 
-- cleanup
-- comments
-- remove debug
 **/
 
 /**
@@ -21,7 +17,7 @@ var options = {
     adult_passengers: 1,
     origin: "JFK",
     destination: "LAX",
-    date: "2016-01-24",
+    date: "2016-01-12",
     time: "14:00",
     flight_class: "economy",
     max_stops: 0,
@@ -29,7 +25,7 @@ var options = {
 }
 
 chooseFlight(options, function(err, answer){
-    console.log("ANSWER", err, answer);
+    console.log(answer);
 
     db.close();
 });

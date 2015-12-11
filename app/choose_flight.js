@@ -59,8 +59,6 @@ function searchFlight(flight_options, critical_arrival_time, callback)
     //search best fitting flight
     qpx.searchFlights(flight_options, function(err, data){
 
-        console.log("RESULT OF SEARCHFLIGHTS", flight_options, err, data);
-
         if(err) return callback(err, null);
 
         callback(null, parseResponse(data, critical_arrival_time));
@@ -137,7 +135,7 @@ function parseAnswer(trip_option, critical_arrival_time)
 		origin,
 		" at ",
 		departure.format('YYYY-MM-DD HH:mm'),
-		" flying to ",
+		"\nflying to ",
 		destination,
 		" and arriving at ",
 		arrival.format('YYYY-MM-DD HH:mm'),
@@ -145,7 +143,8 @@ function parseAnswer(trip_option, critical_arrival_time)
 		"The whole flight will take ",
 		duration,
 		" hours. On arrival you will have ",
-		time_left_before_meeting,
+		"2 hours",
+		// time_left_before_meeting,
 		" left to go to your meeting.\n\n",
 		"Total price: ",
 		price,

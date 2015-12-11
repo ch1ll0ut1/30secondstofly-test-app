@@ -29,7 +29,7 @@ var db = module.exports = {
 				throw new Error('Error connecting to mysql db '+options.user+"@"+options.host+":"+options.port+" => "+err);
 			}
 
-			console.info('Mysql connection established!');
+			// console.info('Mysql connection established!');
 		});
 
 		process.once('uncaughtException', this.close);
@@ -52,7 +52,7 @@ var db = module.exports = {
 			}
 			else
 			{
-				console.info("\n\ngracefully shutting down app..");
+				// console.info("\n\ngracefully shutting down app..");
 				process.exit();
 			}
 		});
